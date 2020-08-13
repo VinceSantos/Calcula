@@ -1,0 +1,22 @@
+### Headers settings
+company: Vince Santos
+
+### Xcode project settings
+project_name: Calcula
+xcodeproj_path: Calcula.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Calcula
+
+# The file path for new modules
+project_file_path: Calcula/Scenes/
+
+# The Xcode group path to new modules
+project_group_path: Calcula/Scenes/
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
