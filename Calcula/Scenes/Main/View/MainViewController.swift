@@ -32,19 +32,8 @@ class MainViewController: UIViewController, MainViewInput {
     }
     
     func processText(text: String) {
-        if !text.isEmpty {
-            let tokens = text.split(separator: " ")
-            if tokens.contains("plus") {
-                var total = 0
-                for item in tokens {
-                    if let number = Int(item) {
-                        total += number
-                    }
-                }
-                outputTextView.text = total.description
-            }
-        } else {
-            outputTextView.text = ""
+        Calcula.shared.process(string: text) { (result) in
+            self.outputTextView.text = result
         }
     }
 }

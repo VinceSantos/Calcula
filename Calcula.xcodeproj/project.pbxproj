@@ -15,6 +15,8 @@
 		7094801767277F8512A9432A /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149471E824AB76673F84B78B /* MainViewInput.swift */; };
 		774387F614B8A12E3B7AF1C3 /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD6E7CB46EC1FCC4B45D858 /* MainRouterInput.swift */; };
 		97FD8FDE8CF8229254D9D865 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A905572F4C56A20E530F6499 /* MainPresenter.swift */; };
+		B785B3F424E6FFCD002C3A27 /* Calcula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785B3F324E6FFCD002C3A27 /* Calcula.swift */; };
+		B785B3F624E70384002C3A27 /* ReservedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785B3F524E70384002C3A27 /* ReservedWords.swift */; };
 		B7CD013F24E3FAC300A259BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD013E24E3FAC300A259BC /* AppDelegate.swift */; };
 		B7CD014624E3FAC300A259BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CD014424E3FAC300A259BC /* Main.storyboard */; };
 		B7CD014924E3FAC300A259BC /* Calcula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7CD014724E3FAC300A259BC /* Calcula.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 		A905572F4C56A20E530F6499 /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		B15EBF643D9A4CA54EF46B0B /* MainInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInitializer.swift; sourceTree = "<group>"; };
 		B563B5F0B0AA199F6C2FD696 /* MainInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInteractorOutput.swift; sourceTree = "<group>"; };
+		B785B3F324E6FFCD002C3A27 /* Calcula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calcula.swift; sourceTree = "<group>"; };
+		B785B3F524E70384002C3A27 /* ReservedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedWords.swift; sourceTree = "<group>"; };
 		B7CD013B24E3FAC300A259BC /* Calcula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CD013E24E3FAC300A259BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7CD014524E3FAC300A259BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +69,6 @@
 				BB3BAC5E32DC2925FBEA62F0 /* MainConfigurator.swift */,
 				B15EBF643D9A4CA54EF46B0B /* MainInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -75,7 +78,6 @@
 				5FEE24BD424068BC6B810D07 /* MainModuleInput.swift */,
 				A905572F4C56A20E530F6499 /* MainPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -86,7 +88,6 @@
 				F3FA4476E29DCE423BD697A8 /* MainViewOutput.swift */,
 				D0165C23988A027201F5A122 /* MainViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -99,7 +100,6 @@
 				A64FEAA0773BCA5A980EB980 /* Router */,
 				2C2EE85205FAD1780C209BF9 /* Configurator */,
 			);
-			name = Main;
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -109,8 +109,16 @@
 				1DD6E7CB46EC1FCC4B45D858 /* MainRouterInput.swift */,
 				9FE11E208C7769C1B146E51B /* MainRouter.swift */,
 			);
-			name = Router;
 			path = Router;
+			sourceTree = "<group>";
+		};
+		B785B3F224E6FFC3002C3A27 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				B785B3F324E6FFCD002C3A27 /* Calcula.swift */,
+				B785B3F524E70384002C3A27 /* ReservedWords.swift */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 		B7CD013224E3FAC300A259BC = {
@@ -141,6 +149,7 @@
 		B7CD015524E3FEDD00A259BC /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B785B3F224E6FFC3002C3A27 /* Engine */,
 				B7CD015824E3FF2000A259BC /* Resources */,
 				B7CD015724E3FF1700A259BC /* Common */,
 			);
@@ -182,7 +191,6 @@
 				B563B5F0B0AA199F6C2FD696 /* MainInteractorOutput.swift */,
 				372EA79859F09359651C29DB /* MainInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -264,11 +272,13 @@
 				C26222FC9A72719AA5E45AA9 /* MainViewController.swift in Sources */,
 				BAEE32A438C90C8289887AFC /* MainModuleInput.swift in Sources */,
 				97FD8FDE8CF8229254D9D865 /* MainPresenter.swift in Sources */,
+				B785B3F424E6FFCD002C3A27 /* Calcula.swift in Sources */,
 				B87731EF57B1F7AAD535C5C4 /* MainInteractorInput.swift in Sources */,
 				58E31F1037E4B5B034CE4448 /* MainInteractorOutput.swift in Sources */,
 				BA40DBD981C6D6237D39375C /* MainInteractor.swift in Sources */,
 				774387F614B8A12E3B7AF1C3 /* MainRouterInput.swift in Sources */,
 				1CA5DEBFD045536E1D4E1676 /* MainRouter.swift in Sources */,
+				B785B3F624E70384002C3A27 /* ReservedWords.swift in Sources */,
 				2E7FAFA174248770672A1A0E /* MainConfigurator.swift in Sources */,
 				4BED05EBD6369C6572C38DAD /* MainInitializer.swift in Sources */,
 			);
