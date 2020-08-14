@@ -1,0 +1,16 @@
+PODS:
+  - Eval (1.5.0)
+
+DEPENDENCIES:
+  - Eval (~> 1.5.0)
+
+SPEC REPOS:
+  trunk:
+    - Eval
+
+SPEC CHECKSUMS:
+  Eval: e7fd9d8384079b87015a1888d9fa9d0c0506424a
+
+PODFILE CHECKSUM: fc13624b4d25ffe0fc908ddaeedcc3c495de9e80
+
+COCOAPODS: 1.9.3

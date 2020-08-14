@@ -9,7 +9,7 @@
 import Foundation
 
 struct ReservedWords {
-    static let plus = ["plus"]
+    static let plus = ["plus", "+"]
     static let minus = ["minus"]
     static let multiply = ["times"]
     static let divide = ["divide"]
