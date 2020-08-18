@@ -7,7 +7,11 @@
 //
 
 class MainInteractor: MainInteractorInput {
-
     weak var output: MainInteractorOutput!
-
+    
+    func calculaProcess(text: String) {
+        Calcula.shared.process(string: text) { (result) in
+            self.output.calculaResults(text: result)
+        }
+    }
 }

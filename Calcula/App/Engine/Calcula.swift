@@ -10,7 +10,7 @@ import Foundation
 
 class Calcula {
     static let shared = Calcula()
-        
+    let url = URL(string: "")
     public func process(string: String, completionHandler: @escaping (String) -> Void) {
         let normalizedString = string.lowercased()
         

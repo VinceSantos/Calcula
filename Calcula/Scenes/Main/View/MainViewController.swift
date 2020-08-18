@@ -9,31 +9,36 @@
 import UIKit
 
 class MainViewController: UIViewController, MainViewInput {
-
     var output: MainViewOutput!
 
-    @IBOutlet weak var outputTextView: UILabel!
-    @IBOutlet weak var inputTextView: UITextField!
+    @IBOutlet weak var outputTextView: UITextView!
+    @IBOutlet weak var inputTextView: UITextView!
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        inputTextView.delegate = self
     }
 
     // MARK: MainViewInput
     func setupInitialState() {
     }
     
-    // MARK: Actions
-    @IBAction func textfieldDidChange(_ sender: Any) {
-        let textfield = sender as! UITextField
-        processText(text: textfield.text ?? "")
+    // MARK: Input
+    func processText(text: String) {
+        output.textToProcess(text: text)
     }
     
-    func processText(text: String) {
-        Calcula.shared.process(string: text) { (result) in
-            self.outputTextView.text = result
-        }
+    
+    // MARK: Output
+    func setCalculaOutput(text: String) {
+        outputTextView.text = text
+    }
+}
+
+extension MainViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        processText(text: textView.text ?? "")
     }
 }

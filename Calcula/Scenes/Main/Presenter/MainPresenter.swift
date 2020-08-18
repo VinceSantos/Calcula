@@ -7,12 +7,19 @@
 //
 
 class MainPresenter: MainModuleInput, MainViewOutput, MainInteractorOutput {
-
     weak var view: MainViewInput!
     var interactor: MainInteractorInput!
     var router: MainRouterInput!
 
     func viewIsReady() {
 
+    }
+    
+    func textToProcess(text: String) {
+        interactor.calculaProcess(text: text)
+    }
+    
+    func calculaResults(text: String) {
+        view.setCalculaOutput(text: text)
     }
 }

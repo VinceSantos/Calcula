@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MainInteractorInput {
-
+    func calculaProcess(text: String)
 }
