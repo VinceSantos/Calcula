@@ -9,5 +9,6 @@
 import Foundation
 
 protocol MainInteractorInput {
+    func initializeCurrencyConverter()
     func calculaProcess(text: String)
 }

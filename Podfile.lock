@@ -1,0 +1,16 @@
+PODS:
+  - Money-FlightSchool (1.2.0)
+
+DEPENDENCIES:
+  - Money-FlightSchool
+
+SPEC REPOS:
+  trunk:
+    - Money-FlightSchool
+
+SPEC CHECKSUMS:
+  Money-FlightSchool: 17d5b5783c51f45b447a52816434fa7798beed87
+
+PODFILE CHECKSUM: 3eb67dc435862e1dedaae84d9965aa2560689055
+
+COCOAPODS: 1.9.3

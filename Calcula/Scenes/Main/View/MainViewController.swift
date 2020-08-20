@@ -14,24 +14,35 @@ class MainViewController: UIViewController, MainViewInput {
     @IBOutlet weak var outputTextView: UITextView!
     @IBOutlet weak var inputTextView: UITextView!
     
+    private var activityIndicator = ActivityIndicator()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        output.setupServices()
+        setupDelegate()
+    }
+    
+    // MARK: MainViewSetup
+    func setupDelegate() {
         inputTextView.delegate = self
     }
 
     // MARK: MainViewInput
-    func setupInitialState() {
-    }
-    
-    // MARK: Input
     func processText(text: String) {
         output.textToProcess(text: text)
     }
     
+    func showActivityIndicator() {
+        activityIndicator.show(uiView: self)
+    }
     
-    // MARK: Output
+    func hideActivityIndicator() {
+        activityIndicator.stop(uiView: self)
+    }
+    
+    // MARK: MainViewOutput
     func setCalculaOutput(text: String) {
         outputTextView.text = text
     }

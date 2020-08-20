@@ -10,4 +10,5 @@ import Foundation
 
 protocol MainInteractorOutput: class {
     func calculaResults(text: String)
+    func initializedCurrencyConverter()
 }

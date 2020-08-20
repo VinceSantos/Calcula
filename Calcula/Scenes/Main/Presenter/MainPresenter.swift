@@ -15,11 +15,20 @@ class MainPresenter: MainModuleInput, MainViewOutput, MainInteractorOutput {
 
     }
     
+    func setupServices() {
+        view.showActivityIndicator()
+        interactor.initializeCurrencyConverter()
+    }
+    
     func textToProcess(text: String) {
         interactor.calculaProcess(text: text)
     }
     
     func calculaResults(text: String) {
         view.setCalculaOutput(text: text)
+    }
+    
+    func initializedCurrencyConverter() {
+        view.hideActivityIndicator()
     }
 }

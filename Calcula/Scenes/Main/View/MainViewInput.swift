@@ -7,12 +7,7 @@
 //
 
 protocol MainViewInput: class {
-
-    /**
-        @author Vince Santos
-        Setup initial state of the view
-    */
-
-    func setupInitialState()
     func setCalculaOutput(text: String)
+    func showActivityIndicator()
+    func hideActivityIndicator()
 }

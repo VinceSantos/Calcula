@@ -14,5 +14,6 @@ protocol MainViewOutput {
     */
 
     func viewIsReady()
+    func setupServices()
     func textToProcess(text: String)
 }
